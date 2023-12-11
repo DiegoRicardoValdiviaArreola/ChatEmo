@@ -1,6 +1,7 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -9,16 +10,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="8dp"
-        android:text="Original Text Here"
-        android:textSize="12sp" /> <!-- Default text, to be updated programmatically -->
+        android:layout_marginBottom="16dp"
+        android:text="@string/txt_textview_original_text"
+        android:textSize="@dimen/default_font_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <LinearLayout
+        android:id="@+id/wrapper_buttons_emotions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_original"
+        app:layout_constraintEnd_toEndOf="parent">
+
 
         <Button
+            android:id="@+id/button_emotion_1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -26,10 +37,11 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:padding="4dp"
-            android:text="😊"
+            android:text="@string/txt_emoji_happy"
             android:textSize="16sp" />
 
         <Button
+            android:id="@+id/button_emotion_2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -37,10 +49,11 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:padding="4dp"
-            android:text="😢"
+            android:text="@string/txt_emojij_sad"
             android:textSize="16sp" />
 
         <Button
+            android:id="@+id/button_emotion_3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -48,10 +61,11 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:padding="4dp"
-            android:text="😡"
+            android:text="@string/txt_emoji_angry"
             android:textSize="16sp" />
 
         <Button
+            android:id="@+id/button_emotion_4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -59,20 +73,36 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:padding="4dp"
-            android:text="😅"
+            android:text="@string/txt_emoji_funny"
             android:textSize="16sp" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView_result"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wrapper_buttons_emotions"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/editText_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Processed Text Here"
-        android:textSize="12sp" /> <!-- Default text, to be updated programmatically -->
+        android:text="@string/txt_textview_processed_text"
+        android:textSize="@dimen/default_font_size"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar"/>
 
 
     <Button
@@ -80,5 +110,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Copy to Clipboard" />
-</LinearLayout>
+        android:layout_marginTop="16dp"
+        android:text="@string/txt_button_copy_to_clipboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

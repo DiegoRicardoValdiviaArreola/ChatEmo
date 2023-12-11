@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ChatEmo</string>
+    <string name="txt_text_selection_menu_option">😊😢😡😅</string>
+    <string name="txt_api_error_msg">There was an error :(</string>
+    <string name="txt_copied_to_clipboard">Copiado al portapapeles</string>
+    <string name="txt_clipboard_label">ChatEmo text</string>
+    <string name="txt_button_copy_to_clipboard">Copy to Clipboard</string>
+    <string name="txt_textview_processed_text">Processed Text Here</string>
+    <string name="txt_textview_original_text">Original Text Here</string>
+    <string name="txt_emoji_happy">😊</string>
+    <string name="txt_emojij_sad">😢</string>
+    <string name="txt_emoji_angry">😡</string>
+    <string name="txt_emoji_funny">😅</string>
 </resources>
