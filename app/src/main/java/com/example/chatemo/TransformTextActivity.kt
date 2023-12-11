@@ -36,8 +36,8 @@ class TransformTextActivity : AppCompatActivity() {
     private val CHAT_GPT_API_TOKEN = BuildConfig.CHAT_GPT_API_KEY
     private val CHAT_GPT_MODEL = "gpt-3.5-turbo"
     private val CHAT_GPT_MAX_TOKENS = 30
-    private val PROMPT_START = "Mejora este texto para que denote"
-    private val EMOTIONS_LIST = listOf<String>("felicidad", "tristeza", "enojo", "comicidad")
+    private val PROMPT_START = "Improve this text to denote"
+    private val EMOTIONS_LIST = listOf<String>("happiness", "sadness", "angry", "funny")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

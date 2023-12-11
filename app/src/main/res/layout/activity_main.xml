@@ -9,6 +9,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/txt_instructions"
+        android:textSize="8pt"
+        android:paddingStart="64dp"
+        android:paddingEnd="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_example"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Hello World!"
         android:textIsSelectable="true"
         app:layout_constraintBottom_toBottomOf="parent"

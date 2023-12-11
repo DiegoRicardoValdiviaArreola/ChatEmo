@@ -11,4 +11,5 @@
     <string name="txt_emojij_sad">😢</string>
     <string name="txt_emoji_angry">😡</string>
     <string name="txt_emoji_funny">😅</string>
+    <string name="txt_instructions">Welcome! Just select the text, and from the edit menu select the 😊😢😡😅 option to change the emotion of the text in any app. \n\nYou can try it right now here below!</string>
 </resources>
